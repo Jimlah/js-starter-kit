@@ -2,7 +2,9 @@
   "name": "js-starter-kit",
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
-  "scripts": {},
+  "scripts": {
+    "start": "node buildScripts/srcServer"
+  },
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
