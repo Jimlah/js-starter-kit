@@ -1,14 +1,16 @@
-let express = require('express');
+import express from 'express';
 
-let path = require('path');
+import { join } from 'path';
 
-let open = require('open');
+import open from 'open';
 
-let port = 3000;
-let server = express();
+/** eslint-disable no-console */
+
+const port = 3000;
+const server = express();
 
 server.get('/', (req, res)=>{
-  res.sendFile(path.join(__dirname, '../src/index.html'));
+  res.sendFile(join(__dirname, '../src/index.html'));
 })
 
 server.listen(port, (err)=>{
@@ -17,7 +19,7 @@ server.listen(port, (err)=>{
   } else {
     open('http://localhost:' + port);
     console.log('Server listening on port ' + port)
-    
+
   }
 })
 
